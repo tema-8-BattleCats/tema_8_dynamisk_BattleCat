@@ -1,0 +1,45 @@
+/* Variabler */
+
+/* Font faces */
+
+@font-face {
+  font-family: "Bebas";
+  src: url(../fonts/BebasNeue-Regular[1].woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-VariableFont_wdth\,wght[1].woff2) format("woff2");
+}
+
+:root {
+  /* Colours */
+  --primary-light: #48a89a;
+  --primary-dark: #081e1c;
+  --secondary-light: #cbefeb;
+  --secondary-dark: #00524c;
+
+  --text-dark: #081e1c;
+  --text-light: #ffffff;
+
+  /* Fonts */
+  --h1-font-family: "Bebas", sans-serif;
+  --font-family: "Roboto", sans-serif;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+
+  /* H1 skal ændres efter html og js implementering*/
+  --h1-size-s: 2.5rem;
+  --h1-size-l: 4rem;
+
+  /* H2 */
+  --h2-size-s: 2rem;
+  --h2-size-l: 3.5rem;
+
+  /* H3 */
+  --h3-size-s: 1.5rem;
+  --h3-size-l: 3rem;
+
+  /* P & A */
+  --text-size-s: 1rem;
+  --text-size-l: 1.4rem;
+}
