@@ -17,6 +17,8 @@
   --primary-dark: #081e1c;
   --secondary-light: #cbefeb;
   --secondary-dark: #00524c;
+  --black: #000000;
+  --gradient: linear-gradient(94deg, #00524c 0.42%, #00b8ab 114.35%);
 
   --text-dark: #081e1c;
   --text-light: #ffffff;
