@@ -21,9 +21,6 @@ img {
 /* Secondary button */
 
 /* Fonts */
-body {
-  font-family: var(--font-family);
-}
 
 h1 {
   font-family: var(--h1-font-family);
@@ -32,15 +29,18 @@ h1 {
 
 h2 {
   font-size: var(--h2-size-s);
+  font-family: var(--font-family);
 }
 
 h3 {
   font-size: var(--h3-size-s);
+  font-family: var(--h1-font-family);
 }
 
 p,
 a {
   font-size: var(--text-size-s);
+  font-family: var(--font-family);
 }
 
 /* -------------------------------- Desktop version ------------------------------ */
