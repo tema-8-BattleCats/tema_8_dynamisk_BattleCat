@@ -23,6 +23,10 @@
   --text-dark: #081e1c;
   --text-light: #ffffff;
 
+  /* General */
+  --border-card: 20px;
+  --border-btn: 5px;
+
   /* Fonts */
   --h1-font-family: "Bebas", sans-serif;
   --font-family: "Roboto", sans-serif;
