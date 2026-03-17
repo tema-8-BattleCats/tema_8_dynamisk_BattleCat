@@ -24,7 +24,7 @@
 .suggest_wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 1.75rem;
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
@@ -33,15 +33,16 @@
 .suggest_form {
   display: grid;
   gap: 0.9rem;
-  padding: 1.25rem;
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
+  padding: 1.25rem;
   border: 2px solid var(--primary-light);
-  border-radius: 16px;
+  border-radius: var(--border-card);
   box-shadow:
     0 0 12px rgba(72, 168, 154, 0.9),
     0 0 25px rgba(72, 168, 154, 0.4);
+  order: 2;
 }
 
 .form_group {
@@ -56,7 +57,7 @@
   padding: 0.95rem 1rem;
   background-color: transparent;
   border: 2px solid var(--primary-light);
-  border-radius: 14px;
+  border-radius: var(--border-card);
   color: var(--text-light);
   font-family: var(--font-family);
   font-size: var(--text-size-s);
@@ -92,6 +93,7 @@
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
+  order: 1;
 }
 
 .suggest_text h3 {
@@ -107,12 +109,18 @@
   max-width: 34ch;
 }
 
+.suggest_button_wrap {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  order: 3;
+}
+
 .suggest_button {
   display: inline-block;
-  margin-top: 1rem;
   padding: 1rem 1.8rem;
   border: 2px solid var(--primary-light);
-  border-radius: 18px;
+  border-radius: var(--border-card);
   background-color: transparent;
   color: var(--text-light);
   font-family: var(--h1-font-family);
@@ -177,11 +185,12 @@
   }
 
   .suggest_wrapper {
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .suggest_form,
-  .suggest_text {
+  .suggest_text,
+  .suggest_button_wrap {
     max-width: 760px;
   }
 
@@ -197,28 +206,41 @@
   .suggest_text p {
     max-width: 42ch;
   }
-
-  .suggest_button {
-    margin-top: 1.5rem;
-  }
 }
 
 /* --------- rigtig desktop: 2 kolonner --------- */
-@media (min-width: 1080px) {
+@media (min-width: 1120px) {
   .suggest_wrapper {
-    grid-template-columns: minmax(520px, 680px) minmax(260px, 360px);
-    gap: 2rem;
+    grid-template-columns: minmax(520px, 680px) minmax(280px, 360px);
+    grid-template-areas:
+      "form text"
+      "form button";
+    gap: 2rem 2.5rem;
     justify-content: center;
   }
 
   .suggest_form,
-  .suggest_text {
+  .suggest_text,
+  .suggest_button_wrap {
     max-width: none;
     margin: 0;
   }
 
+  .suggest_form {
+    grid-area: form;
+    order: initial;
+  }
+
   .suggest_text {
-    align-self: center;
+    grid-area: text;
+    order: initial;
+    align-self: start;
+  }
+
+  .suggest_button_wrap {
+    grid-area: button;
+    order: initial;
+    align-self: start;
   }
 
   .suggest_text h3 {
@@ -229,17 +251,13 @@
   .suggest_text p {
     max-width: 30ch;
   }
-
-  .suggest_button {
-    margin-top: 2rem;
-  }
 }
 
 /* --------- bred desktop --------- */
 @media (min-width: 1280px) {
   .suggest_wrapper {
     grid-template-columns: minmax(560px, 720px) 360px;
-    gap: 3rem;
+    gap: 2.5rem 3rem;
   }
 
   .suggest_form {
