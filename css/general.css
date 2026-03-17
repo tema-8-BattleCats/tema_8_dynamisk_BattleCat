@@ -174,7 +174,29 @@ footer nav {
 
 /* Primary button */
 
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  transition: transform 0.2s ease;
+  color: var(--text-light);
+}
+
+.primary_btn {
+  background-image: var(--gradient);
+}
+
+.btn:hover {
+  transform: scale(0.96);
+}
+
 /* Secondary button */
+
+.secondary_btn {
+  background-color: transparent;
+  border: solid 2px var(--primary-light);
+}
 
 /* -------------------------------- Desktop version ------------------------------ */
 
