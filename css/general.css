@@ -12,15 +12,16 @@ img {
 
 /* --------------------------------- Mobil version ----------------------------- */
 
-/* Header */
-
-/* Footer */
-
-/* Primary button */
-
-/* Secondary button */
-
 /* Fonts */
+
+body {
+  color: var(--text-light);
+}
+
+main {
+  background-color: var(--primary-dark);
+  padding: 20px;
+}
 
 h1 {
   font-family: var(--h1-font-family);
@@ -43,17 +44,141 @@ a {
   font-family: var(--font-family);
 }
 
+/* Header */
+.header_main {
+  background-color: var(--black);
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+}
+.burger {
+  display: block;
+  background-color: transparent;
+  border: 0;
+}
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+nav.active .menu {
+  display: block;
+  background-color: var(--black);
+  position: absolute;
+  top: 62px;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+nav.active .menu li {
+  margin: 10px 20px;
+}
+nav.active .menu a {
+  font-size: 24px;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-light);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+.menu li:last-child {
+  margin-right: 0;
+}
+.menu a {
+  display: block;
+  padding: 10px;
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+}
+.menu a:hover,
+.footer_menu a:hover {
+  text-decoration: underline;
+}
+
+.header_border {
+  background-image: var(--gradient);
+  height: 3px;
+  width: 100%;
+}
+
+/* Footer */
+footer nav {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: auto;
+}
+
+.footer_menu {
+  list-style: none;
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1.5rem;
+}
+
+.footer_menu li a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.align_right {
+  text-align: end;
+}
+
+.footer_logo p {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+/* Primary button */
+
+/* Secondary button */
+
 /* -------------------------------- Desktop version ------------------------------ */
 
 @media (min-width: 800px) {
-  /* Header */
-
-  /* Footer */
-
-  /* Primary button */
-
-  /* Secondary button */
-
   /* Fonts */
 
   h1 {
@@ -72,4 +197,19 @@ a {
   a {
     font-size: var(--text-size-l);
   }
+
+  /* Header */
+  .burger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  /* Footer */
+
+  /* Primary button */
+
+  /* Secondary button */
 }
