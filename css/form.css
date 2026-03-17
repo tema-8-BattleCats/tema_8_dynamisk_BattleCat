@@ -1,0 +1,252 @@
+.suggest_section {
+  background-color: var(--black);
+  padding: 2.5rem 1rem;
+}
+
+.suggest_title {
+  font-family: var(--h1-font-family);
+  font-size: var(--h1-size-s);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.suggest_title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 2px;
+  margin: 0.5rem auto 0;
+  background-image: var(--gradient);
+}
+
+.suggest_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.suggest_form {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  border: 2px solid var(--primary-light);
+  border-radius: 16px;
+  box-shadow:
+    0 0 12px rgba(72, 168, 154, 0.9),
+    0 0 25px rgba(72, 168, 154, 0.4);
+}
+
+.form_group {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.suggest_form input,
+.suggest_form select,
+.suggest_form textarea {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  background-color: transparent;
+  border: 2px solid var(--primary-light);
+  border-radius: 14px;
+  color: var(--text-light);
+  font-family: var(--font-family);
+  font-size: var(--text-size-s);
+  outline: none;
+  box-shadow: 0 0 10px rgba(72, 168, 154, 0.55);
+}
+
+.suggest_form input::placeholder,
+.suggest_form textarea::placeholder {
+  color: var(--text-light);
+  opacity: 0.45;
+}
+
+.suggest_form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.suggest_form select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.suggest_form input:focus,
+.suggest_form select:focus,
+.suggest_form textarea:focus {
+  border-color: var(--secondary-light);
+  box-shadow: 0 0 14px rgba(203, 239, 235, 0.8);
+}
+
+.suggest_text {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.suggest_text h3 {
+  font-family: var(--font-family);
+  font-size: 2rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+  max-width: 12ch;
+}
+
+.suggest_text p {
+  margin-bottom: 1.2rem;
+  max-width: 34ch;
+}
+
+.suggest_button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 1.8rem;
+  border: 2px solid var(--primary-light);
+  border-radius: 18px;
+  background-color: transparent;
+  color: var(--text-light);
+  font-family: var(--h1-font-family);
+  font-size: 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(72, 168, 154, 0.55);
+  transition: 0.3s;
+}
+
+.suggest_button:hover {
+  background-image: var(--gradient);
+}
+
+.form_message {
+  min-height: 1.5rem;
+  font-family: var(--font-family);
+  font-size: var(--text-size-s);
+  margin-top: 0.3rem;
+}
+
+.error {
+  border-color: #ff5c5c !important;
+  box-shadow: 0 0 10px rgba(255, 92, 92, 0.7) !important;
+}
+
+.error_message {
+  display: none;
+  color: #ff7b7b;
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+}
+
+.error_message.show {
+  display: block;
+}
+
+/* --------- lidt større mobil / lille tablet --------- */
+@media (min-width: 600px) {
+  .suggest_section {
+    padding: 3rem 1.5rem;
+  }
+
+  .suggest_form {
+    padding: 1.5rem;
+  }
+
+  .suggest_text h3 {
+    font-size: 2.3rem;
+  }
+}
+
+/* --------- tablet / smal desktop --------- */
+@media (min-width: 850px) {
+  .suggest_section {
+    padding: 3.5rem 2rem;
+  }
+
+  .suggest_title {
+    font-size: var(--h1-size-l);
+    margin-bottom: 2.5rem;
+  }
+
+  .suggest_wrapper {
+    gap: 2.5rem;
+  }
+
+  .suggest_form,
+  .suggest_text {
+    max-width: 760px;
+  }
+
+  .suggest_form {
+    padding: 1.75rem;
+  }
+
+  .suggest_text h3 {
+    font-size: 2.6rem;
+    max-width: 14ch;
+  }
+
+  .suggest_text p {
+    max-width: 42ch;
+  }
+
+  .suggest_button {
+    margin-top: 1.5rem;
+  }
+}
+
+/* --------- rigtig desktop: 2 kolonner --------- */
+@media (min-width: 1080px) {
+  .suggest_wrapper {
+    grid-template-columns: minmax(520px, 680px) minmax(260px, 360px);
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .suggest_form,
+  .suggest_text {
+    max-width: none;
+    margin: 0;
+  }
+
+  .suggest_text {
+    align-self: center;
+  }
+
+  .suggest_text h3 {
+    font-size: 2.8rem;
+    max-width: 10ch;
+  }
+
+  .suggest_text p {
+    max-width: 30ch;
+  }
+
+  .suggest_button {
+    margin-top: 2rem;
+  }
+}
+
+/* --------- bred desktop --------- */
+@media (min-width: 1280px) {
+  .suggest_wrapper {
+    grid-template-columns: minmax(560px, 720px) 360px;
+    gap: 3rem;
+  }
+
+  .suggest_form {
+    padding: 2rem;
+  }
+
+  .suggest_text h3 {
+    font-size: 3rem;
+  }
+}
