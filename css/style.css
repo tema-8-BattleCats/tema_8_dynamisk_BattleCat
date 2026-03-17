@@ -12,11 +12,81 @@ img {
 
 /* --------------------------------- Mobil version ----------------------------- */
 
-/* Index */
+/* -------Index */
+/* Hero */
+.hero_section {
+  background-color: var(--black);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.85) 45%,
+      rgba(0, 0, 0, 0.35) 72%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    url("../img/hero_landing.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  text-align: center;
+  min-height: 550px;
+  padding: 4rem 0 10rem;
+  display: flex;
+  justify-content: center;
+}
 
-/* Productlist */
+.hero_content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-/* Productdetails */
+.hero_title {
+  font-family: var(--h1-font-family);
+  font-size: 4.8rem;
+  line-height: 0.95;
+  text-transform: uppercase;
+  max-width: 14ch;
+  margin: 0 auto 1.2rem;
+}
+
+.hero_text {
+  max-width: 40ch;
+  margin: 0 auto 1.8rem;
+}
+
+.hero_btn {
+  padding: 0.8rem 2.4rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 799px) {
+  .hero_section {
+    min-height: 420px;
+    padding: 3rem 0 7rem;
+  }
+
+  .hero_title {
+    font-size: 3rem;
+    max-width: 12ch;
+  }
+
+  .hero_text {
+    max-width: 28ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero_btn {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+}
+/* ------ */
+
+/* -------Productlist */
+
+/* -------Productdetails */
 
 /* -------------------------------- Desktop version ------------------------------ */
 
