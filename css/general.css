@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  background-color: var(--primary-dark);
+  background-color: var(--black);
   padding: 20px;
 }
 
@@ -174,28 +174,42 @@ footer nav {
 
 /* Primary button */
 
-.btn {
+.primary_btn {
   display: inline-block;
   text-decoration: none;
   padding: 0.5rem 2rem;
-  border-radius: 30px;
+  border-radius: var(--border-btn);
   transition: transform 0.2s ease;
   color: var(--text-light);
-}
-
-.primary_btn {
   background-image: var(--gradient);
 }
 
-.btn:hover {
+.primary_btn:hover,
+.secondary_btn:hover {
   transform: scale(0.96);
 }
 
-/* Secondary button */
+/* Secondary button (fungerer kun på sort baggrund)*/
 
 .secondary_btn {
-  background-color: transparent;
-  border: solid 2px var(--primary-light);
+  display: inline-block;
+  background: transparent;
+  padding: 0.5rem 2rem;
+  background-image:
+    linear-gradient(90deg, rgb(0, 0, 0), rgb(0, 0, 0)), var(--gradient);
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: solid 2px transparent;
+  border-radius: var(--border-btn);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.btn_label {
+  background-image: linear-gradient(var(--text-light));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* -------------------------------- Desktop version ------------------------------ */
