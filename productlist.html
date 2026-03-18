@@ -4,19 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
+    <!-- CSS -->
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- JS -->
     <script src="js/productlist.js" defer></script>
     <script src="js/general.js" defer></script>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Product list</title>
   </head>
   <body>
     <header>
       <div class="header_main">
         <div class="logo">
-          <a href="/">
-            <img src="logo.png" alt="Logo" />
+          <a href="index.html">
+            <img src="IMG/logo_main.webp" alt="Logo" />
           </a>
         </div>
         <nav>
@@ -37,45 +58,177 @@
       <div class="header_border"></div>
     </header>
     <main>
+      <section class="hero_section_productlist">
+        <div class="hero_content_productlist">
+          <h1 class="hero_title_productlist">
+            Apple brings back the glossy black iPhone with new jet black color
+          </h1>
+
+          <a
+            target="_blank"
+            href="https://www.apple.com/iphone-17/"
+            class="primary_btn"
+            >Read more</a
+          >
+        </div>
+      </section>
       <h1>Category name</h1>
       <section class="product_card_container">
-        <a href="productdetails.html">
-          <article class="product_card">
-            <div product_thumbnail>
+        <!-- <a href="productdetails.html"> -->
+        <article class="product_card">
+          <div class="thumbnail">
+            <img
+              src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+              alt="iPhone 20 Plus"
+            />
+          </div>
+
+          <div>
+            <h2 class="product_name">iPhone 5s</h2>
+            <p class="brand"><span>Apple</span></p>
+            <!-- OBS fra H3 til P i brandnavn jf. prototype -->
+            <div class="rating_container">
               <img
-                src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-                alt="iPhone 20 Plus"
+                class="rating"
+                src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
+                alt="rating"
               />
+              <p class="reviews">(256 reviews)</p>
             </div>
+          </div>
 
-            <div>
-              <h2 class="product_name">iPhone 20 Plus</h2>
-              <h3 class="brand"><span>Apple</span></h3>
-              <div class="rating_section">
-                <p class="reviews">(256 reviews)</p>
-                <img
-                  class="rating"
-                  src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
-                  alt="rating"
-                />
-              </div>
-            </div>
+          <p class="product_text">
+            Newest Apple phone on the market, now with 6 more camera lenses and
+            full Ai control.
+          </p>
+          <br />
+          <div class="price">
+            <p>From <span>199.99</span>,-</p>
+          </div>
+          <br />
+          <div class="buttons">
+            <a class="primary_btn btn" href="/">Buy</a>
+            <a class="secondary_btn btn" href="/">Read more</a>
+          </div>
+        </article>
+        <!-- </a> -->
 
-            <p class="product_text">
-              Newest Apple phone on the market, now with 6 more camera lenses
-              and full Ai control.
-            </p>
-            <br />
-            <div class="price">
-              <p>From <span>9.999</span>,-</p>
+        <!-- <a href="productdetails.html"> -->
+        <article class="product_card">
+          <div class="thumbnail">
+            <img
+              src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+              alt="iPhone 20 Plus"
+            />
+          </div>
+
+          <div>
+            <h2 class="product_name">iPhone 5s</h2>
+            <p class="brand"><span>Apple</span></p>
+            <!-- OBS fra H3 til P i brandnavn jf. prototype -->
+            <div class="rating_container">
+              <img
+                class="rating"
+                src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
+                alt="rating"
+              />
+              <p class="reviews">(256 reviews)</p>
             </div>
-            <br />
-            <div class="buttons">
-              <a class="primary_btn btn" href="/">Buy</a>
-              <a class="secondary_btn btn" href="/">Read more</a>
+          </div>
+
+          <p class="product_text">
+            Newest Apple phone on the market, now with 6 more camera lenses and
+            full Ai control.
+          </p>
+          <br />
+          <div class="price">
+            <p>From <span>199.99</span>,-</p>
+          </div>
+          <br />
+          <div class="buttons">
+            <a class="primary_btn btn" href="/">Buy</a>
+            <a class="secondary_btn btn" href="/">Read more</a>
+          </div>
+        </article>
+        <!-- </a> -->
+
+        <!-- <a href="productdetails.html"> -->
+        <article class="product_card">
+          <div class="thumbnail">
+            <img
+              src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+              alt="iPhone 20 Plus"
+            />
+          </div>
+
+          <div>
+            <h2 class="product_name">iPhone 5s</h2>
+            <p class="brand"><span>Apple</span></p>
+            <!-- OBS fra H3 til P i brandnavn jf. prototype -->
+            <div class="rating_container">
+              <img
+                class="rating"
+                src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
+                alt="rating"
+              />
+              <p class="reviews">(256 reviews)</p>
             </div>
-          </article>
-        </a>
+          </div>
+
+          <p class="product_text">
+            Newest Apple phone on the market, now with 6 more camera lenses and
+            full Ai control.
+          </p>
+          <br />
+          <div class="price">
+            <p>From <span>199.99</span>,-</p>
+          </div>
+          <br />
+          <div class="buttons">
+            <a class="primary_btn btn" href="/">Buy</a>
+            <a class="secondary_btn btn" href="/">Read more</a>
+          </div>
+        </article>
+        <!-- </a> -->
+
+        <!-- <a href="productdetails.html"> -->
+        <article class="product_card">
+          <div class="thumbnail">
+            <img
+              src="https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+              alt="iPhone 20 Plus"
+            />
+          </div>
+
+          <div>
+            <h2 class="product_name">iPhone 5s</h2>
+            <p class="brand"><span>Apple</span></p>
+            <!-- OBS fra H3 til P i brandnavn jf. prototype -->
+            <div class="rating_container">
+              <img
+                class="rating"
+                src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
+                alt="rating"
+              />
+              <p class="reviews">(256 reviews)</p>
+            </div>
+          </div>
+
+          <p class="product_text">
+            Newest Apple phone on the market, now with 6 more camera lenses and
+            full Ai control.
+          </p>
+          <br />
+          <div class="price">
+            <p>From <span>199.99</span>,-</p>
+          </div>
+          <br />
+          <div class="buttons">
+            <a class="primary_btn btn" href="/">Buy</a>
+            <a class="secondary_btn btn" href="/">Read more</a>
+          </div>
+        </article>
+        <!-- </a> -->
       </section>
     </main>
     <footer>
@@ -87,8 +240,8 @@
           <li><a href="index.html">Cvr nr?</a></li>
         </ul>
         <div class="footer_logo">
-          <a href="/">
-            <img src="logo.png" alt="Logo" />
+          <a href="index.html">
+            <img src="IMG/logo_main.webp" alt="Logo" />
           </a>
           <p>El-Sync © 2026</p>
         </div>
