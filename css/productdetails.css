@@ -1,0 +1,55 @@
+/* general */
+
+.container {
+  border: solid #48a89a 5px;
+
+}
+
+
+.section_container>* {
+  margin-bottom: 2rem;
+}
+
+
+
+/* PRODUCT ID */
+.product_id {
+  max-width: 80vw;
+  background: var(--gradient);
+}
+
+.star_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  max-width: 30%;
+}
+
+.star_container img {
+  width: 20px;
+  height: auto;
+  display: block;
+}
+
+/* PRODUCT AND PRICE */
+
+.image_price_container>* {
+  margin-bottom: 1rem;
+}
+
+.price {
+  background-color: var(--secondary-dark);
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+}
+
+
+.cta_group .btn {
+  display: block;
+  width: 100%;
+}
+
+
+
+/* 
+--gradient-dark: linear-gradient(94deg, #081E1C 0.42%, #020808 114.35%); */
