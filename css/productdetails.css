@@ -1,12 +1,24 @@
 /* general */
 
-.container {
-  border: solid #48a89a 5px;
+a.btn:link,
+a.btn:visited {
+  color: var(--text-light);
+}
 
+.container {
+  background-color: transparent;
+  border: solid 2px var(--primary-light);
+  /* tilpas gradient border hvis tid / opdater styling efter C  */
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  color: var(--secondary-light);
 }
 
 
-.section_container>* {
+
+.section_container>*:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -14,8 +26,10 @@
 
 /* PRODUCT ID */
 .product_id {
-  max-width: 80vw;
-  background: var(--gradient);
+  max-width: fit-content;
+  background: var(--gradient-dark);
+  border-radius: 20px;
+  padding: 1rem 3rem 1rem 1rem;
 }
 
 .star_container {
@@ -36,20 +50,86 @@
   margin-bottom: 1rem;
 }
 
+.image_price_container img {
+  border-radius: 20px;
+}
+
+
+
+
+.price_container {
+  padding: 1rem;
+}
+
+.price_container>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 .price {
   background-color: var(--secondary-dark);
   border-radius: 30px;
-  padding: 0.5rem 1rem;
   width: fit-content;
+  padding: 3rem;
+
 }
 
+
+.cta_group>*:not(:last-child) {
+  margin-bottom: 1rem;
+}
 
 .cta_group .btn {
   display: block;
-  width: 100%;
+  width: fit-content;
+
 }
 
 
+/* about specs contianer */
 
-/* 
---gradient-dark: linear-gradient(94deg, #081E1C 0.42%, #020808 114.35%); */
+.about_specs_container {
+  padding-left: 1rem;
+
+}
+
+.about_specs_container>* {
+  margin-top: 1rem;
+
+
+}
+
+.about_specs_container>*:not(:last-child) {
+  margin-bottom: 3.5rem;
+
+
+}
+
+.about_specs_container h3 {
+  margin-bottom: 1.5rem;
+}
+
+
+/* customers also liked */
+
+.customers_liked_product_container>*:not(:first-child) {
+  margin-top: 1rem;
+}
+
+
+.customers_liked_product {
+  padding: 1rem 2rem;
+  aspect-ratio: 6 / 7;
+  /* width : height */
+  width: 100%;
+  /* or any width you like */
+  max-width: 100vw;
+}
+
+.customers_liked_product>*:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.customers_liked_product img {
+  border-radius: 20px;
+  aspect-ratio: 1 / 1;
+}
