@@ -148,7 +148,11 @@ nav.active .menu a {
 
 /* Footer */
 footer nav {
-  background-color: var(--black);
+  /* background-color: var(--black); */
+  background-image: url(/IMG/footer_background.webp);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;
