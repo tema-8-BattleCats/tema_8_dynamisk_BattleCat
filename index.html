@@ -1,105 +1,151 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- JS -->
-    <script src="js/index.js" defer></script>
-    <script src="js/general.js" defer></script>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href="favicon/site.webmanifest" />
-    <title>Frontpage</title>
-  </head>
-  <body>
-    <header>
-      <div class="header_main">
-        <div class="logo">
-          <a href="index.html">
-            <img src="IMG/logo_main.webp" alt="Logo" />
-          </a>
-        </div>
-        <nav>
-          <ul class="menu">
-            <li><a href="index.html">Smartphones</a></li>
-            <li><a href="index.html">Tablets</a></li>
-            <li><a href="index.html">Laptops</a></li>
-            <li><a href="index.html">Accessories</a></li>
-            <li><a href="index.html">About us</a></li>
-          </ul>
-          <button class="burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-          </button>
-        </nav>
-      </div>
-      <div class="header_border"></div>
-    </header>
 
-    <main>
-      <section class="hero_section">
-        <div class="hero_content">
-          <h1 class="hero_title">Discover the latest in technology</h1>
-          <p class="hero_text">
-            Explore smartphones, computers and tablets all in one place.
-          </p>
-          <a href="productlist.html" class="primary_btn hero_btn"
-            >Browse products</a
-          >
-        </div>
-      </section>
-      <h1>Header</h1>
-      <h2>Subheader</h2>
-      <h3>Subheader 2</h3>
-      <p>Paragraph goes here</p>
-      <a class="primary_btn btn" href="/">Primary button</a>
-      <a class="secondary_btn btn" href="/"
-        ><span class="btn_label">Secondary button</span></a
-      >
-    </main>
-    <footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- JS -->
+  <script src="js/index.js" defer></script>
+  <script src="js/general.js" defer></script>
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <title>Frontpage</title>
+</head>
+
+<body>
+  <header>
+    <div class="header_main">
+      <div class="logo">
+        <a href="index.html">
+          <img src="IMG/logo_main.webp" alt="Logo" />
+        </a>
+      </div>
       <nav>
-        <ul class="footer_menu">
-          <li><a href="index.html">El-Sync</a></li>
-          <li><a href="index.html">Phone: 12 34 78 91</a></li>
-          <li><a href="index.html">Email: costumerservice@es.com</a></li>
-          <li><a href="index.html">BRN: DK87654321</a></li>
-        </ul>
-        <div class="footer_logo">
-          <a href="index.html">
-            <img src="IMG/logo_main.webp" alt="Logo" />
-          </a>
-          <p>El-Sync © 2026</p>
-        </div>
-        <ul class="footer_menu align_right">
+        <ul class="menu">
+          <li><a href="index.html">Smartphones</a></li>
+          <li><a href="index.html">Tablets</a></li>
+          <li><a href="index.html">Laptops</a></li>
+          <li><a href="index.html">Accessories</a></li>
           <li><a href="index.html">About us</a></li>
-          <li><a href="index.html">Contact</a></li>
-          <li><a href="index.html">Find us</a></li>
-          <li><a href="index.html">Terms & Conditions</a></li>
         </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
       </nav>
-    </footer>
-  </body>
+    </div>
+    <div class="header_border"></div>
+  </header>
+
+  <main>
+    <section class="hero_section">
+      <div class="hero_content">
+        <h1 class="hero_title">Discover the latest in technology</h1>
+        <p class="hero_text">
+          Explore smartphones, computers and tablets all in one place.
+        </p>
+        <a href="productlist.html" class="primary_btn hero_btn">Browse products</a>
+      </div>
+    </section>
+
+    <!-- nedenstående section er kopieret fra productdetails.html og er stylet i style.css productdetails sektionen. -->
+
+    <section class="customers_liked section_container">
+      <h1 id="customers_underline">Great deals</h1>
+      <section class="customers_liked_product_container">
+        <section class="customers_liked_product container">
+          <img src="IMG/cat_computer.webp" alt="picture of product">
+          <h2>iphone 17</h2>
+          <h3>12.000,-</h3>
+        </section>
+        <section class="customers_liked_product container">
+          <img src="IMG/cat_computer.webp" alt="picture of product">
+          <h2>iphone 17</h2>
+          <h3>12.000,-</h3>
+        </section>
+        <section class="customers_liked_product container">
+          <img src="IMG/cat_computer.webp" alt="picture of product">
+          <h2>iphone 17</h2>
+          <h3>12.000,-</h3>
+        </section>
+      </section>
+    </section>
+
+
+    <!-- ----------------------------------------------------slut ----------------------------------------------------  -->
+
+    <section class="Categories_section">
+      <h1 id="customers_underline">Categories</h1>
+      <section class="categories_container">
+
+        <section class="category_container">
+          <img src="IMG/cat_computer.webp" alt="picture of product">
+          <a class="secondary_btn btn" href="/"><span class="btn_label">Computers</span></a>
+        </section>
+
+        <section class="category_container">
+          <img src="IMG/cat_phones.webp" alt="picture of product">
+          <a class="secondary_btn btn" href="/"><span class="btn_label">Phones</span></a>
+        </section>
+
+        <section class="category_container">
+          <img src="IMG/cat_teblets.webp" alt="picture of product">
+          <a class="secondary_btn btn" href="/"><span class="btn_label">Tablets</span></a>
+        </section>
+
+        <section class="category_container">
+          <img src="IMG/cat_accessories.webp" alt="picture of product">
+          <a class="secondary_btn btn" href="/"><span class="btn_label">Accessories</span></a>
+        </section>
+
+      </section>
+    </section>
+    </section>
+
+
+
+
+
+
+
+    <h1>Header</h1>
+    <h2>Subheader</h2>
+    <h3>Subheader 2</h3>
+    <p>Paragraph goes here</p>
+    <a class="primary_btn btn" href="/">Primary button</a>
+    <a class="secondary_btn btn" href="/"><span class="btn_label">Secondary button</span></a>
+  </main>
+  <footer>
+    <nav>
+      <ul class="footer_menu">
+        <li><a href="index.html">El-Sync</a></li>
+        <li><a href="index.html">Phone: 12 34 78 91</a></li>
+        <li><a href="index.html">Email: costumerservice@es.com</a></li>
+        <li><a href="index.html">BRN: DK87654321</a></li>
+      </ul>
+      <div class="footer_logo">
+        <a href="index.html">
+          <img src="IMG/logo_main.webp" alt="Logo" />
+        </a>
+        <p>El-Sync © 2026</p>
+      </div>
+      <ul class="footer_menu align_right">
+        <li><a href="index.html">About us</a></li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html">Find us</a></li>
+        <li><a href="index.html">Terms & Conditions</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+
 </html>
