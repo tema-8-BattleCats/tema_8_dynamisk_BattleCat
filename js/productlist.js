@@ -1,7 +1,15 @@
 const urlcategory = new URLSearchParams(window.location.search).get("category");
 const container = document.querySelector(".product_card_container");
 const endpoint = `https://dummyjson.com/products/category/${urlcategory}`;
+const filterDropdownBtn = document.querySelector("#filter_dropdown_button");
+
 document.querySelector(".category_title").textContent = urlcategory;
+
+filterDropdownBtn.addEventListener("click", displayDropdown);
+
+function displayDropdown(e) {
+  document.getElementById("filter_dropdown").classList.toggle("show_dropdown");
+}
 
 function getData() {
   fetch(endpoint)
