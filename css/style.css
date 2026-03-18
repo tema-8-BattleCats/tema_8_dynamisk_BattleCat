@@ -89,7 +89,7 @@ img {
 .hero_section_productlist {
   background-color: var(--black);
   background-image: url(../IMG/hero_phone.webp);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   align-items: end;
@@ -111,6 +111,11 @@ img {
   /* Index */
 
   /* Productlist */
+  /* Hero */
+
+  .hero_content_productlist {
+    max-width: 50vw;
+  }
 
   /* Productdetails */
 }
