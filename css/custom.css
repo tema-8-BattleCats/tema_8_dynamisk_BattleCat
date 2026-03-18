@@ -6,6 +6,7 @@
   font-family: "Bebas";
   src: url(../fonts/BebasNeue-Regular[1].woff2) format("woff2");
 }
+
 @font-face {
   font-family: "Roboto";
   src: url(../fonts/Roboto-VariableFont_wdth\,wght[1].woff2) format("woff2");
@@ -19,6 +20,7 @@
   --secondary-dark: #00524c;
   --black: #000000;
   --gradient: linear-gradient(94deg, #00524c 0.42%, #00b8ab 114.35%);
+
 
   --text-dark: #081e1c;
   --text-light: #ffffff;
