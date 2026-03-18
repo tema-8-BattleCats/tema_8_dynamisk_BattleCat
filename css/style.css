@@ -534,8 +534,10 @@ a.btn:visited {
 
 
 .article_section {
-  background: black
+  background: black;
 }
+
+
 
 /* -------Productdetails */
 
@@ -605,6 +607,14 @@ a.btn:visited {
   }
 
 
+  /* articles */
+
+  .article_section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+
+  }
 
 
 
