@@ -400,6 +400,23 @@ a.btn:visited {
   text-wrap: balance;
 }
 
+/* article section */
+
+.article_intro {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.article_intro>* {
+
+  margin-bottom: 1rem;
+}
+
+
+.article_section {
+  background: aquamarine;
+}
+
 /* -------Productdetails */
 
 /* -------------------------------- Desktop version ------------------------------ */
