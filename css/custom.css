@@ -20,6 +20,7 @@
   --secondary-dark: #00524c;
   --black: #000000;
   --gradient: linear-gradient(94deg, #00524c 0.42%, #00b8ab 114.35%);
+  --gradient-dark: linear-gradient(94deg, #081E1C 0.42%, #020808 114.35%);
 
 
   --text-dark: #081e1c;
@@ -57,6 +58,7 @@
 .product_card_container a {
   text-decoration: none;
 }
+
 .product_card {
   background-color: transparent;
   border: solid 2px var(--primary-light);
@@ -77,9 +79,11 @@
   color: var(--secondary-light);
   padding: 5px;
 }
+
 .reviews {
   color: var(--primary-light);
 }
+
 .price {
   font-weight: bold;
   text-align: end;
