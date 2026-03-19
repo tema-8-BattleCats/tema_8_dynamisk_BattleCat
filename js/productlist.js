@@ -17,14 +17,13 @@ function getData() {
 }
 
 function filter(e) {
-  console.log("Virker");
   const valgt = document.querySelector("select").value;
   console.log(valgt);
   if (valgt == "all") {
     showData(allData);
   } else {
-    const udsnit = allData.filter((element) => element.gender == valgt);
-    showProducts(udsnit);
+    const udsnit = allData.products.filter((element) => element.brand == valgt);
+    showData({ products: udsnit });
   }
 }
 
