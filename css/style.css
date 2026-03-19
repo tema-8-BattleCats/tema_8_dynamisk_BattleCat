@@ -18,11 +18,13 @@ img {
 .hero_section {
   background-color: var(--black);
   background-image:
-    linear-gradient(to bottom,
+    linear-gradient(
+      to bottom,
       rgba(0, 0, 0, 0.95) 0%,
       rgba(0, 0, 0, 0.85) 45%,
       rgba(0, 0, 0, 0.35) 72%,
-      rgba(0, 0, 0, 0.15) 100%),
+      rgba(0, 0, 0, 0.15) 100%
+    ),
     url("../img/hero_landing.webp");
   background-repeat: no-repeat;
   background-size: cover;
@@ -309,7 +311,6 @@ img {
   grid-template-columns: 1fr;
   gap: 3rem;
   padding: 5rem;
-
 }
 
 .category_container {
@@ -319,8 +320,6 @@ img {
   border: solid 2px var(--primary-light);
   color: var(--secondary-light);
   border-radius: 20px;
-
-
 }
 
 .category_container img {
@@ -337,14 +336,6 @@ img {
   background: none;
   border: 2px solid var(--primary-light);
 }
-
-
-
-
-
-
-
-
 
 /* Productdetails */
 
@@ -391,7 +382,7 @@ a.btn:visited {
 
 /* PRODUCT AND PRICE */
 
-.image_price_container>* {
+.image_price_container > * {
   margin-bottom: 1rem;
 }
 
@@ -403,7 +394,7 @@ a.btn:visited {
   padding: 1rem;
 }
 
-.price_container>*:not(:last-child) {
+.price_container > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -429,11 +420,11 @@ a.btn:visited {
   padding-left: 1rem;
 }
 
-.about_specs_container>* {
+.about_specs_container > * {
   margin-top: 1rem;
 }
 
-.about_specs_container>*:not(:last-child) {
+.about_specs_container > *:not(:last-child) {
   margin-bottom: 3.5rem;
 }
 
@@ -449,9 +440,7 @@ a.btn:visited {
 
 .customers_liked {
   margin-bottom: 4rem;
-
 }
-
 
 .customers_liked_product_container {
   display: flex;
@@ -472,9 +461,6 @@ a.btn:visited {
   display: none;
 }
 
-
-
-
 .customers_liked_product {
   padding: 1rem 2rem;
   aspect-ratio: 6 / 7;
@@ -484,7 +470,7 @@ a.btn:visited {
   max-width: 100vw;
 }
 
-.customers_liked_product>*:not(:first-child) {
+.customers_liked_product > *:not(:first-child) {
   margin-top: 0.5rem;
 }
 
@@ -518,6 +504,26 @@ a.btn:visited {
 .hero_content_productlist {
   max-width: 40vw;
   text-wrap: balance;
+}
+
+.filter_buttons {
+  position: relative;
+  display: inline-block;
+}
+
+#filter_dropdown {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  z-index: 1;
+}
+
+#filter_dropdown button {
+  display: block;
+}
+
+.show_dropdown {
+  display: block;
 }
 
 /* article section */
@@ -577,7 +583,6 @@ a.btn:visited {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     padding: 5rem;
-
   }
 
   .category_container {
@@ -587,8 +592,6 @@ a.btn:visited {
     border: solid 2px var(--primary-light);
     color: var(--secondary-light);
     border-radius: 20px;
-
-
   }
 
   .category_container img {
