@@ -1,24 +1,34 @@
 const urlcategory = new URLSearchParams(window.location.search).get("category");
 const container = document.querySelector(".product_card_container");
 const endpoint = `https://dummyjson.com/products/category/${urlcategory}`;
-const filterDropdownBtn = document.querySelector("#filter_dropdown_button");
 
 document.querySelector(".category_title").textContent = urlcategory;
+document.querySelector("#apply_filter").addEventListener("click", filter);
 
-filterDropdownBtn.addEventListener("click", displayDropdown);
-
-function displayDropdown(e) {
-  document.getElementById("filter_dropdown").classList.toggle("show_dropdown");
-}
+let allData;
 
 function getData() {
   fetch(endpoint)
-    .then((respons) => respons.json())
-    .then(showData);
+    .then((response) => response.json())
+    .then((data) => {
+      allData = data;
+      showData(allData);
+    });
+}
+
+function filter(e) {
+  console.log("Virker");
+  const valgt = document.querySelector("select").value;
+  console.log(valgt);
+  if (valgt == "all") {
+    showData(allData);
+  } else {
+    const udsnit = allData.filter((element) => element.gender == valgt);
+    showProducts(udsnit);
+  }
 }
 
 function showData(data) {
-  console.log(data);
   let markup = "";
   data.products.forEach((product) => {
     markup += `<a href="productdetails.html?product=${product.id}">

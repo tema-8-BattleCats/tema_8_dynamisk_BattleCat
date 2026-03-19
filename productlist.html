@@ -74,24 +74,26 @@
       </section>
       <h2 class="category_title"></h2>
       <div class="filter_buttons">
-        <button id="filter_dropdown_button" class="secondary_btn">Brands</button>
-        <div id="filter_dropdown">
-          <button>Apple</button>
-          <button>Samsung</button>
-          <button>Asus</button>
-          <button>Huawei</button>
-          <button>Lenovo</button>
-          <button>Dell</button>
-          <button>Oppo</button>
-          <button>Realme</button>
-          <button>Vivo</button>
-          <button>Amazon</button>
-          <button>Beats</button>
-          <button>TechGear</button>
-          <button>GadgetMaster</button>
-          <button>SnapTech</button>
-          <button>ProVision</button>
-        </div>
+        <label for="filter_select">Filter by brands</label>
+        <select name="filter_select" id="filter_select">
+          <option value="all">Show all</option>
+           <option value="apple">Apple</option>
+           <option value="samsung">Samsung</option>
+           <option value="asus">Asus</option>
+           <option value="huawei">Huawei</option>
+           <option value="lenovo">Lenovo</option>
+           <option value="dell">Dell</option>
+           <option value="oppo">Oppo</option>
+           <option value="realme">Realme</option>
+           <option value="vivo">Vivo</option>
+           <option value="amazon">Amazon</option>
+           <option value="beats">Beats</option>
+           <option value="techgear">TechGear</option>
+           <option value="gadgetmaster">GadgetMaster</option>
+           <option value="snaptech">SnapTech</option>
+           <option value="provision">ProVision</option>
+        </select>
+        <button id="apply_filter">Apply filter</button>
       </div>
       <section class="product_card_container">
         <a href="productdetails.html">
