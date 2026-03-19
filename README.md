@@ -1,6 +1,6 @@
 # Teknisk dokumentation – [ El-Sync ]
 
-<!-- Te opdaterer senere og fjerner fra dokumentationsrapport -->
+<!-- Te opdaterer når js er done -->
 
 ## Om projektet
 
@@ -32,14 +32,12 @@ Projektet er opdelt i HTML, CSS og JavaScript-filer.
 ```
 project/
 ├── index.html
-├── form.html
 ├── productlist.html
 ├── productdetails.html
 ├── css/
 │   └── custom.css
     └── general.css
     └── style.css
-    └── form.css
 ├── js/
     ├── general.js
 │   ├── index.js
@@ -52,10 +50,9 @@ project/
 
 ### Filbeskrivelser
 
-- **index.html** – forsiden
+- **index.html** – forsiden – indeholder også formularen
 - **productlist.html** – viser en liste med data fra API'et
 - **productdetails.html** – viser detaljer om en valgt opskrift
-- **form.html** – indeholder formularen
 - **css-filer** – styrer designet
 - **JavaScript-filer** – styrer dynamisk indhold på de respektive sider
 
@@ -120,8 +117,6 @@ showRecipeDetails();
 validateForm();
 ```
 
-<!-- tjek at vi har anvendt camelCase -->
-
 Vi har brugt camelCase i JavaScript, fordi det gør koden mere ensartet og lettere at læse.
 
 ---
@@ -156,27 +151,28 @@ Vi henter data fra et API i JSON-format.
 
 **Et objekt kan fx se sådan ud:**
 
-```json
-{
-  "id": 1,
-  "title": "Opskriftsnavn",
-  "description": "Kort beskrivelse",
-  "category": "dessert",
-  "cookTime": 45,
-  "servings": 4,
-  "thumbnail": "billede.jpg"
-}
-```
+````json
+    {
+      "id": 121,
+      "title": "iPhone 5s",
+      "description": "The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.",
+      "category": "smartphones",
+      "price": 199.99,
+      "rating": 2.83,
+      "brand": "Apple",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
+    },```
 
 ### Felter vi bruger
 
 - **id** – bruges til at sende brugeren videre til detaljesiden
-- **title** – opskriftsnavn
-- **description** – beskrivelse af opskriften
-- **category** – opskriftkategori (fx dessert, hovedret, forret)
-- **cookTime** – tilberedningstid i minutter
-- **servings** – antal portioner
-- **thumbnail** – opskriftsbillede
+- **title** – productnavn
+- **description** – beskrivelse af produktet
+- **category** – produktkategori (fx smartphones, tablets, laptops, accessories)
+- **brand** – brandnavn
+- **price** – produktpris
+- **ratings** – ratings
+- **thumbnail** – produktbillede
 
 ---
 
@@ -188,7 +184,6 @@ Vi har lavet en formular, hvor brugeren kan indtaste oplysninger.
 
 - `required` – feltet skal udfyldes
 - `type="email"` – validerer email-format
-- `type="number"` – accepterer kun tal
 
 Det sikrer, at brugeren ikke kan sende formularen, hvis felterne ikke er udfyldt korrekt.
 
@@ -200,18 +195,18 @@ Vi har brugt GitHub til at samarbejde om projektet.
 
 Vi har arbejdet med branches, så vi ikke sad og ændrede i det samme på samme tid.
 
-Vi navngav branchene med feature først og navnet på den, der lavede branchen til sidst.
+Vi navngav branchene med en beskrivende tekst.
 
 ### Eksempler på branches
 
-- `feature-forside-steen`
-- `feature-opskriftsliste-peter`
-- `feature-detaljeside-karsten`
-- `feature-formular-pia`
+- `udkast_productcard_te`
+- `footer_textopdatering_baggrundsbillede_implementering`
+- `great deals, categories, static`
+- `baggrund implementeres`
 
 ### Workflow
 
-1. Lave en branch med feature-navn og eget navn til sidst
+1. Lave en branch med beskrivende navn
 2. Kode en feature
 3. Committe ændringer
 4. Pushe til GitHub
@@ -223,7 +218,7 @@ Det gjorde det nemmere at holde styr på, hvem der lavede hvad.
 
 ## Bæredygtighed
 
-Vi har tænkt bæredygtighed ind i projektet ved at holde page weight under 250 kb samt en enkel informationasarkitektur.
+Vi har tænkt bæredygtighed ind i projektet ved løbende at måle page weight for at idéelt at holde det under 250 kb. Derudover har vi valgt en enkel informationasarkitektur.
 
 **Tiltag:**
 
@@ -235,7 +230,7 @@ Vi har tænkt bæredygtighed ind i projektet ved at holde page weight under 250 
 ---
 
 ## Udfordringer undervejs
-
+// hvilke udfordringer har I haft?
 En af vores udfordringer var at få data fra Rest API’et vist korrekt på siderne.
 Det var også lidt svært at få id med videre i URL’en til detaljesiden.
 
@@ -260,7 +255,8 @@ Hvis vi skulle arbejde videre med projektet, kunne vi forbedre det ved at tilfø
 
 ## Gruppemedlemmer
 
-- Steen I. Sko
-- Peter Pedal
-- Karsten Lange Løgstrup
-- Pia Planlægger
+- Camille Oddershede
+- Oliver Lukas Hartmann Jakobsen
+- Noah Noinovic
+- Te Rahbæk
+````
