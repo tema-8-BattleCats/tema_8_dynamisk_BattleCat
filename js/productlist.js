@@ -4,32 +4,55 @@ const endpoint = `https://dummyjson.com/products/category/${urlcategory}`;
 
 document.querySelector(".category_title").textContent = urlcategory;
 document.querySelector("#apply_filter").addEventListener("click", filter);
+document
+  .querySelectorAll(".sort_btn")
+  .forEach((btn) => btn.addEventListener("click", sort));
 
 let allData;
+let udsnit;
 
 function getData() {
   fetch(endpoint)
     .then((response) => response.json())
     .then((data) => {
-      allData = data;
-      showData(allData);
+      allData = data.products;
+      udsnit = [...data.products];
+      showData(udsnit);
     });
 }
 
 function filter(e) {
-  const valgt = document.querySelector("select").value;
-  console.log(valgt);
+  const valgt = document.querySelector("#filter_select").value;
   if (valgt == "all") {
-    showData(allData);
+    udsnit = allData;
   } else {
-    const udsnit = allData.products.filter((element) => element.brand == valgt);
-    showData({ products: udsnit });
+    udsnit = allData.filter((element) => element.brand == valgt);
   }
+  showData(udsnit);
+}
+
+function sort(e) {
+  if (e.target.dataset.price) {
+    const dir = e.target.dataset.price;
+    if (dir == "asc") {
+      udsnit.sort((a, b) => a.price - b.price);
+    } else {
+      udsnit.sort((a, b) => b.price - a.price);
+    }
+  } else {
+    const dir = e.target.dataset.text;
+    if (dir == "az") {
+      udsnit.sort((a, b) => a.title.localeCompare(b.title, "en"));
+    } else {
+      udsnit.sort((a, b) => b.title.localeCompare(a.title, "en"));
+    }
+  }
+  showData(udsnit);
 }
 
 function showData(data) {
   let markup = "";
-  data.products.forEach((product) => {
+  data.forEach((product) => {
     markup += `<a href="productdetails.html?product=${product.id}">
         <article class="product_card">
           <div class="thumbnail">

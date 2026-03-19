@@ -8,7 +8,6 @@ function getData() {
 }
 function showData(data) {
   let categories = [data[6], data[10], data[13], data[16]];
-  console.log(categories);
   categories.forEach((category) => {
     categoryContainer.innerHTML += `<section class="category_container">
           <img src="IMG/cat_computer.webp" alt="picture of product">
