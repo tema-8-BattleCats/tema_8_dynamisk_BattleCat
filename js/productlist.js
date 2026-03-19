@@ -53,8 +53,10 @@ function sort(e) {
 function showData(data) {
   let markup = "";
   data.forEach((product) => {
-    markup += `<a href="productdetails.html?product=${product.id}">
+    console.log("product id:", product.id);
+    markup += `
         <article class="product_card">
+        
           <div class="thumbnail">
             <img
               src="${product.thumbnail}"
@@ -67,11 +69,7 @@ function showData(data) {
             <p class="brand"><span>${product.brand}</span></p>
             <!-- OBS fra H3 til P i brandnavn jf. prototype -->
             <div class="rating_container">
-              <img
-                class="rating"
-                src="http://localhost:3845/assets/006fc72cc8a5bd479fa6ddcf1096de6687b79a40.svg"
-                alt="rating"
-              />
+              <span class="rating">&#9733 &#9733 &#9733 &#9733 &#9734</span>
               <p class="reviews">(${product.reviews.length} reviews)</p>
             </div>
           </div>
@@ -85,11 +83,11 @@ function showData(data) {
           </div>
           <br />
           <div class="buttons">
-            <a class="primary_btn btn" href="/">Buy</a>
-            <a class="secondary_btn btn" href="/">Read more</a>
+            <a class="primary_btn btn" href="productdetails.html?product=${product.id}">Buy</a>
+            <a class="secondary_btn btn" href="productdetails.html?product=${product.id}">Read more</a>
           </div>
         </article>
-        </a>`;
+        `;
   });
   container.innerHTML = markup;
 }
