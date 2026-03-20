@@ -25,7 +25,7 @@ img {
       rgba(0, 0, 0, 0.35) 72%,
       rgba(0, 0, 0, 0.15) 100%
     ),
-    url("../img/hero_landing.webp");
+    url("../IMG/hero_landing.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
