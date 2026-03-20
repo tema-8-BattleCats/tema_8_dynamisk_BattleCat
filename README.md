@@ -1,7 +1,5 @@
 # Teknisk dokumentation – [ El-Sync ]
 
-<!-- Te opdaterer når js er done -->
-
 ## Om projektet
 
 Dette projekt er lavet som en del af Tema 8. Vi har udviklet et dynamisk site med HTML, CSS og JavaScript, hvor indholdet bliver hentet fra et Rest API.
@@ -17,8 +15,7 @@ Sitet består af flere sider, hvor brugeren kan:
 ## Links
 
 - GitHub repository: [https://github.com/orgs/tema-8-BattleCats/repositories]
-- GitHub Pages: [indsæt link]
-<!-- mangler at indsætte github pages link ovenfor -->
+- GitHub Pages: [https://tema-8-battlecats.github.io/tema_8_dynamisk_BattleCat/]
 - Figma: [https://www.figma.com/design/7N2eYvrN6O6aGbRYuXYVG5/T8---Team-projekt?node-id=1-5&t=sq88Z355IVQ8m74L-1]
 - Figjam: [https://www.figma.com/board/G2ut9DzZqOBSYmF63fvd5o/T8---Team-projekt?node-id=0-1&t=hxAgLVo1tetHgBe6-1]
 - Trello: [https://trello.com/invite/b/69aec41a850ad95e45eb3974/ATTIf8e499315eca23c2f8d90ddef8a9ab4c2CD0B930/t8-battlecatsss]
@@ -98,12 +95,10 @@ Vi har navngivet vores filer, variabler og funktioner så de så tydeligt som mu
 
 ### Eksempler på variabler
 
-<!-- indsæt eksempler på variabler her -->
-
 ```javascript
-const recipeContainer;
-const recipeId;
-const selectedCategory;
+const urlcategory;
+const container;
+const productId;
 ```
 
 <!-- indsæt eksempler på funktioner her -->
@@ -111,10 +106,12 @@ const selectedCategory;
 ### Eksempler på funktioner
 
 ```javascript
-fetchRecipes();
-showRecipes();
-showRecipeDetails();
-validateForm();
+getData();
+showData(data);
+filter(e);
+sort(e);
+cancelPopup(event);
+handleSubmit(event);
 ```
 
 Vi har brugt camelCase i JavaScript, fordi det gør koden mere ensartet og lettere at læse.
@@ -126,16 +123,18 @@ Vi har brugt camelCase i JavaScript, fordi det gør koden mere ensartet og lette
 Vi har kommenteret de steder i koden, hvor det giver mening.
 Fx ved funktioner, fetch-kald og steder hvor der sker DOM-manipulation.
 
-<!-- Mangler at blive opdateret nedenfor -->
-
 **Eksempel:**
 
 ```javascript
 // Henter produkter fra Rest API'et
-async function fetchProducts() {
-  const res = await fetch(apiURL);
-  const data = await res.json();
-  return data.products;
+function getData() {
+  fetch(endpoint)
+    .then((response) => response.json())
+    .then((data) => {
+      allData = data.products;
+      udsnit = [...data.products];
+      showData(udsnit);
+    });
 }
 ```
 
@@ -143,15 +142,13 @@ Vi har prøvet ikke at skrive kommentarer til helt åbenlyse ting, men kun dér 
 
 ---
 
-<!-- Te note - er nået hertil -->
-
 ## Data og JSON-struktur
 
 Vi henter data fra et API i JSON-format.
 
 **Et objekt kan fx se sådan ud:**
 
-````json
+```json
     {
       "id": 121,
       "title": "iPhone 5s",
@@ -161,7 +158,8 @@ Vi henter data fra et API i JSON-format.
       "rating": 2.83,
       "brand": "Apple",
       "thumbnail": "https://cdn.dummyjson.com/product-images/smartphones/iphone-5s/thumbnail.webp"
-    },```
+    },
+```
 
 ### Felter vi bruger
 
@@ -218,7 +216,7 @@ Det gjorde det nemmere at holde styr på, hvem der lavede hvad.
 
 ## Bæredygtighed
 
-Vi har tænkt bæredygtighed ind i projektet ved løbende at måle page weight for at idéelt at holde det under 250 kb. Derudover har vi valgt en enkel informationasarkitektur.
+Vi har tænkt bæredygtighed ind i projektet ved løbende at måle page weight for idéelt at holde det under 250 kb. Derudover har vi valgt en enkel informationasarkitektur.
 
 **Tiltag:**
 
@@ -230,16 +228,16 @@ Vi har tænkt bæredygtighed ind i projektet ved løbende at måle page weight f
 ---
 
 ## Udfordringer undervejs
+
 // hvilke udfordringer har I haft?
-En af vores udfordringer var at få data fra Rest API’et vist korrekt på siderne.
-Det var også lidt svært at få id med videre i URL’en til detaljesiden.
+
+Der var væsentlige udfordringer med den dynamiske del. Mange af problemerne kom af det faktum at opbygningen af api’et er anderledes end det vi tidligere havde arbejdet med og fået undervisning i. Eksempelvis havde vi ikke altid kun et array (produktkategori) med objekter (produkter). Men derimod et objekt med et array af objekter. Altså var de data vi skulle bruge nested længere nede end vi før havde prøvet.
 
 **Løsninger:**
 
 - Console.logge data undervejs
 - Teste fetch-kald separat
 - Bruge URLSearchParams
-- Dele opgaverne mere tydeligt i gruppen
 
 ---
 
@@ -248,8 +246,8 @@ Det var også lidt svært at få id med videre i URL’en til detaljesiden.
 Hvis vi skulle arbejde videre med projektet, kunne vi forbedre det ved at tilføje:
 
 - Søgefunktion
-- Error handling
-- Loading state
+- Optimere filtrering
+- tilføje UX Patterns
 
 ---
 
@@ -259,4 +257,7 @@ Hvis vi skulle arbejde videre med projektet, kunne vi forbedre det ved at tilfø
 - Oliver Lukas Hartmann Jakobsen
 - Noah Noinovic
 - Te Rahbæk
-````
+
+```
+
+```
